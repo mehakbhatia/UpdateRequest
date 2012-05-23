@@ -11,7 +11,7 @@
 
 @implementation CheckForUpdate
 
-- (IBAction)grabURLInBackground:(id)sender
+- (void)grabURLInBackground
 {
     NSURL *url = [NSURL URLWithString:@"http://allseeing-i.com"];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
@@ -32,9 +32,6 @@
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSError *error = [request error];
-    NSLog(@"there was some error %@",error);
-}
--(void)print {
-    NSLog(@"the check for update ws called");
+ //   NSLog(@"there was some error %@",error);
 }
 @end

@@ -14,8 +14,8 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize check;
-@synthesize viewController;
+@synthesize checkForUpdate = checkForUpdate_;
+@synthesize viewController = viewController_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,14 +26,14 @@
     viewController.view.frame = [UIScreen mainScreen].applicationFrame;
     [window addSubview:[viewController view]];
     [window makeKeyAndVisible];
+    
     //* Instantiate your rootViewController
-    self.check=[[CheckForUpdate alloc]init];
-    [check grabURLInBackground:nil];
+    self.checkForUpdate = [[CheckForUpdate alloc]init];
+    [self.checkForUpdate grabURLInBackground];
+    
     return YES;
 }
--(void)print{
-    NSLog(@"the app delegate ws called");
-}
+
 					
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -13,13 +13,13 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     UIWindow *window;
-    CheckForUpdate *check;
+    CheckForUpdate *checkForUpdate;
     UIViewController *viewController;
 
 }
 @property (strong, nonatomic) UIViewController *viewController;
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, retain) CheckForUpdate *check;
--(void)print;
+@property (strong, retain) CheckForUpdate *checkForUpdate;
+
 
 @end

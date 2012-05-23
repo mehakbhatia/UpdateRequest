@@ -11,6 +11,6 @@
 
 @interface CheckForUpdate : NSObject
 
-- (IBAction)grabURLInBackground:(id)sender;
--(void)print;
+- (void)grabURLInBackground;
+
 @end

@@ -169,12 +169,10 @@
 		4E2B04AF156A557400579641 = {
 			isa = PBXGroup;
 			children = (
+				4E2B04C5156A557500579641 /* Supporting Files */,
 				4EF8EDBC156B94F1008CF199 /* lib */,
 				4E2B050E156A5D3300579641 /* libz.dylib */,
-				4E2B050C156A5D1600579641 /* MobileCoreServices.framework */,
-				4E2B050A156A5C0300579641 /* SystemConfiguration.framework */,
-				4E2B0507156A5BF200579641 /* CFNetwork.framework */,
-				4E2B04C4156A557500579641 /* UpdateRequest */,
+				4E2B04C4156A557500579641 /* src */,
 				4E2B04E5156A557500579641 /* UpdateRequestTests */,
 				4E2B04BD156A557500579641 /* Frameworks */,
 				4E2B04BB156A557500579641 /* Products */,
@@ -193,6 +191,9 @@
 		4E2B04BD156A557500579641 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E2B050C156A5D1600579641 /* MobileCoreServices.framework */,
+				4E2B050A156A5C0300579641 /* SystemConfiguration.framework */,
+				4E2B0507156A5BF200579641 /* CFNetwork.framework */,
 				4E2B04BE156A557500579641 /* UIKit.framework */,
 				4E2B04C0156A557500579641 /* Foundation.framework */,
 				4E2B04C2156A557500579641 /* CoreGraphics.framework */,
@@ -201,19 +202,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4E2B04C4156A557500579641 /* UpdateRequest */ = {
+		4E2B04C4156A557500579641 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4E80E7C3156D23BD0056826C /* CheckforUpdate */,
 				4E2B04CD156A557500579641 /* AppDelegate.h */,
 				4E2B04CE156A557500579641 /* AppDelegate.m */,
 				4E2B04D3156A557500579641 /* MainStoryboard_iPad.storyboard */,
+				4E80E7B3156D11910056826C /* MainStoryboard_iPhone.storyboard */,
 				4E2B04D6156A557500579641 /* ViewController.h */,
 				4E2B04D7156A557500579641 /* ViewController.m */,
-				4E2B04C5156A557500579641 /* Supporting Files */,
-				4E80E75C156CE6E30056826C /* CheckForUpdate.h */,
-				4E80E75D156CE6E30056826C /* CheckForUpdate.m */,
-				4E80E7B3156D11910056826C /* MainStoryboard_iPhone.storyboard */,
 			);
+			name = src;
 			path = UpdateRequest;
 			sourceTree = "<group>";
 		};
@@ -226,6 +226,7 @@
 				4E2B04CC156A557500579641 /* UpdateRequest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = UpdateRequest;
 			sourceTree = "<group>";
 		};
 		4E2B04E5156A557500579641 /* UpdateRequestTests */ = {
@@ -245,6 +246,15 @@
 				4E2B04E8156A557500579641 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E80E7C3156D23BD0056826C /* CheckforUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				4E80E75C156CE6E30056826C /* CheckForUpdate.h */,
+				4E80E75D156CE6E30056826C /* CheckForUpdate.m */,
+			);
+			name = CheckforUpdate;
 			sourceTree = "<group>";
 		};
 		4EF8EDBC156B94F1008CF199 /* lib */ = {

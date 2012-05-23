@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIViewController *aController = [[UIViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    UIViewController *aController = [[UIViewController alloc] init];
     self.viewController = aController;
     
     
@@ -28,6 +28,7 @@
     [window makeKeyAndVisible];
     //* Instantiate your rootViewController
     self.check=[[CheckForUpdate alloc]init];
+    [check grabURLInBackground:nil];
     return YES;
 }
 -(void)print{

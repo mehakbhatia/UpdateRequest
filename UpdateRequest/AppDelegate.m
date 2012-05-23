@@ -7,17 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "ASIHTTPRequest.h"
+#import "ASIHTTPRequestDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize check;
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIViewController *aController = [[UIViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    self.viewController = aController;
+    
+    
+    viewController.view.frame = [UIScreen mainScreen].applicationFrame;
+    [window addSubview:[viewController view]];
+    [window makeKeyAndVisible];
+    //* Instantiate your rootViewController
+    self.check=[[CheckForUpdate alloc]init];
     return YES;
 }
-							
+-(void)print{
+    NSLog(@"the app delegate ws called");
+}
+					
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

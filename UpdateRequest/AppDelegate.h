@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASIHTTPRequest.h"
+#import "CheckForUpdate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    UIWindow *window;
+    CheckForUpdate *check;
+    UIViewController *viewController;
 
+}
+@property (strong, nonatomic) UIViewController *viewController;
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, retain) CheckForUpdate *check;
+-(void)print;
 
 @end
